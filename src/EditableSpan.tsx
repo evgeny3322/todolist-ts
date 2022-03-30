@@ -1,4 +1,4 @@
-gitimport React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import {TextField} from '@material-ui/core';
 
 type EditableSpanPropsType = {

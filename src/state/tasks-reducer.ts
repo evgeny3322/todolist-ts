@@ -2,6 +2,9 @@ import {FilterValuesType, TasksStateType, TodolistType} from '../App';
 import {v1} from 'uuid';
 import {AddTodolistActionType, RemoveTodolistActionType} from './todolists-reducer';
 
+import {todolistsReducer} from './todolists-reducer';
+import {combineReducers, createStore} from 'redux';
+//a
 export type RemoveTaskActionType = {
     type: 'REMOVE-TASK'
     todolistId: string
@@ -104,3 +107,15 @@ export const changeTaskTitleAC = (taskId: string,
     return { type: 'CHANGE-TASK-TITLE', title, todolistId, taskId}
 }
 
+const rootReducer = combineReducers({
+    tasks: tasksReducer,
+    todolists: todolistsReducer
+})
+// непосредственно создаём store
+export const store = createStore(rootReducer);
+// определить автоматически тип всего объекта состояния
+export type AppRootStateType = ReturnType<typeof rootReducer>
+
+// а это, чтобы можно было в консоли браузера обращаться к store в любой момент
+// @ts-ignore
+window.store = store;

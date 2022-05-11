@@ -3,7 +3,7 @@ import {Task} from "../Task";
 import React from "react";
 
 export default {
-    title: 'components/src/Task',
+    title: 'Todolist/Task',
     component: Task,
 }
 

@@ -2,7 +2,7 @@ import {action} from "@storybook/addon-actions";
 import {EditableSpan} from "../EditableSpan";
 
 export default {
-    title: 'components/src/EditableSpan',
+    title: 'Todolist/EditableSpan',
     component: EditableSpan,
 }
 

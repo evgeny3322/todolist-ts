@@ -30,8 +30,8 @@ const LoginForm = () => {
 
     const formik = useFormik({
         initialValues: {
-            email: 'retard_x_98@mail.ru',
-            password: '6YyKjw!EkXN2TRL',
+            email: 'free@samuraijs.com',
+            password: 'free',
             rememberMe: false,
             captcha: undefined,
         },
